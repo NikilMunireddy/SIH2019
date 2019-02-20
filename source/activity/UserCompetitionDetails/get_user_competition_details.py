@@ -14,19 +14,24 @@ def get_details(fb_id):
 
         curs.execute(SQL_QUERY,(fb_id,))
         conn.commit()
-        result=curs.fetchall()[0]
-        data={
-            "fb_id":result[0],
-            "fb_id":result[1],
-            "no_of_comp":result[2],
-            "total_points":result[3],
-            "meta":result[4]
-        }
-        return data
+        try:
+            result=curs.fetchall()[0]
+            data={
+                "fb_id":result[0],
+                "fb_id":result[1],
+                "no_of_comp":result[2],
+                "total_points":result[3],
+                "meta":result[4]
+            }
+            return data
+        except:
+            print("No results found")
+            return None
+
         print(curs.rowcount)
     except(Exception ,psycopg2.Error) as Error:
         print(Error)
 
 
 if __name__ == "__main__":
-    print(json.dumps(get_details("nikilm@gmail.com"),indent=2))
+    print(json.dumps(get_details("nikil@coldmail.com"),indent=2))

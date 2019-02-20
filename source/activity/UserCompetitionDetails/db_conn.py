@@ -16,4 +16,5 @@ def get_connection():
         print("Exiting with satus code 1")
         exit(1)
 
-
+if __name__ == "__main__":
+    get_connection()
