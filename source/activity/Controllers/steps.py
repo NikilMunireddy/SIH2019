@@ -2,8 +2,8 @@ from flask import  Blueprint,jsonify
 from flask_cors import CORS,cross_origin
 
 
-from ..steps import check_is_present,add_step_activity,update_step_activity
-from ..steps import get_step_count
+from ..Steps import check_is_present,add_step_activity,update_step_activity
+from ..Steps import get_step_count
 
 steps_api =Blueprint('steps_api',__name__)
 
