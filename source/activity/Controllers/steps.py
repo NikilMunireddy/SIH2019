@@ -41,3 +41,4 @@ def get_steps():
     user_id,date='nikil@gmail.com','2018-02-18'
     count=get_step_count.get_steps(user_id,date)[0]
     return jsonify({"stepcount":count,"user_id":user_id})
+    

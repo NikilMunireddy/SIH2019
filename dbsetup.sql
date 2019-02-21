@@ -11,3 +11,9 @@ CREATE TABLE user_competition_details (fb_name varchar(255) ,fb_id varchar(255),
  fb_name | fb_id | no_of_comp | total_points | meta 
 ---------+-------+------------+--------------+------
 */
+ CCREATE TABLE competition_details (comp_id varchar(255),comp_name varchar(255) ,location_long float(53),location_lat float(53));
+
+/*
+ comp_id | comp_name | location_long | location_lat 
+-------+-----------+---------------+--------------
+*/
