@@ -16,5 +16,14 @@ def get_connection():
         print("Exiting with satus code 1")
         exit(1)
 
+
+def get_configuration():
+    with open(DB_CONFIG_FILE) as f:
+        data = dict(json.load(f))
+    print(data)
+    return data
+
+
+
 if __name__ == "__main__":
     get_connection()
