@@ -87,3 +87,6 @@ ALTER TABLE registration_detail ADD COLUMN misc json;
 
 
 ALTER TABLE registration_detail ADD CONSTRAINT "id_unique" UNIQUE(id);
+ALTER TABLE gps_location  ADD COLUMN time float;
+
+

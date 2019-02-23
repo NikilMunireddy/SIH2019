@@ -3,16 +3,18 @@ try:
 except:
     import db_connection
 
+import time_convert
 import psycopg2
 import json
 
-def get_gps_points(user_id):
+
+def get_gps_points(user_id,start_ts,end_ts):
     conn=db_connection.get_connection()
     cursor=conn.cursor()
-
     try:
-        SQL_QUERY="SELECT * FROM gps_location WHERE id=%s"
-        cursor.execute(SQL_QUERY,(user_id,))
+        SQL_QUERY="SELECT * FROM gps_location WHERE time BETWEEN %s AND %s AND id=%s"
+        value=(start_ts,end_ts,user_id)
+        cursor.execute(SQL_QUERY,value)
         result=cursor.fetchall()
         print(result)
         if cursor.rowcount>0:
@@ -24,3 +26,7 @@ def get_gps_points(user_id):
         status="Failed"
     return (status,result)
 
+if __name__ == "__main__":
+    start_ts=time_convert.DMY_to_timestamp('22/02/2019')
+    end_ts=time_convert.DMY_to_timestamp('24/02/2019')
+    get_gps_points('1243',start_ts,end_ts)
