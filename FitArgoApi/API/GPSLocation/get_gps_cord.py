@@ -3,7 +3,6 @@ try:
 except:
     import db_connection
 
-import time_convert
 import psycopg2
 import json
 
@@ -27,6 +26,8 @@ def get_gps_points(user_id,start_ts,end_ts):
     return (status,result)
 
 if __name__ == "__main__":
-    start_ts=time_convert.DMY_to_timestamp('22/02/2019')
-    end_ts=time_convert.DMY_to_timestamp('24/02/2019')
+    # yyyy/mm/dd
+    import time_convert
+    start_ts=time_convert.DMY_to_timestamp('2019-02-22')
+    end_ts=time_convert.DMY_to_timestamp('2019-02-24')
     get_gps_points('1243',start_ts,end_ts)

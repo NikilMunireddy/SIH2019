@@ -13,4 +13,7 @@ run the below command to run the server
 python main.py
 ``` 
 
+## database architecture 
+![img not found](./db-arch.png)
+
 
