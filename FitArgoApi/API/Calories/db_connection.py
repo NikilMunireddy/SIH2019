@@ -1,7 +1,6 @@
 import json
 import psycopg2
 
-DB_CONFIG_FILE="./dbconfig.json"
 
 # connects to the Postgres database and returns the connection object
 def get_connection():
@@ -24,6 +23,9 @@ def get_configuration():
     return data
 
 
-
 if __name__ == "__main__":
+    DB_CONFIG_FILE='../../dbconfig.json'
     get_connection()
+else:
+    DB_CONFIG_FILE="./dbconfig.json"
+

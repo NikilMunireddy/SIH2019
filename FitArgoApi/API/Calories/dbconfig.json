@@ -1,6 +1,0 @@
-{
-    "host":"localhost",
-    "database":"fitargo",
-    "user":"postgres",
-    "password":"password"
-}
