@@ -7,9 +7,11 @@ user_personal_details=Blueprint('user_personal_details',__name__)
 
 CORS(user_personal_details)
 
-# POST REQUEST SINCE THE LENGTH OF THE QUERY URL IS LIMITED
 
-'''--------ADD USER-------'''
+
+
+#'''--------ADD USER-------'''
+# NOTE: Use 'POST' beacuse the data that can be encoded in URL is limited
 
 @user_personal_details.route('/api/userPersonalDetails/adduser',methods=['GET','POST'])
 def add_user_personal_details():
@@ -23,7 +25,8 @@ def add_user_personal_details():
     return jsonify({'ret':status})
 
 
-'''-------------GET USER INFO-------------'''
+#'''-------------GET USER INFO-------------'''
+#   returns the entire personal info in tuple
 
 @user_personal_details.route('/api/userPersonalDetails/getUserInfo/<user_id>',methods=['GET','POST'])
 def get_user_info_details(user_id):
