@@ -14,7 +14,6 @@ def add_gps_cords(user_id,long,lat):
     status=add_gps_cord.add_gps_cordianates(user_id,long,lat,ts)
     return jsonify({'status':status})
 
-
 # yyyy/mm/dd  fomate 
 @user_gps_cords.route('/api/GPSLocation/getCords/<user_id>/<start_date>/<end_date>',methods=['GET','POST'])
 def get_cords(user_id,start_date,end_date):
