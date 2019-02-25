@@ -1,21 +1,21 @@
 {
-    "Egg boiled":{
+    "boiled egg":{
         "calories":80,
         "quantity":1
     },
-    "Egg fried":{
+    "fried egg":{
         "calories":110,
         "quantity":1
     },
-    "Egg omlette":{
+    "omlette egg":{
         "calories":120,
         "quantity":1
     },
-    "Chapati":{
+    "chapati":{
         "calories":60,
         "quantity":1
     },
-    "Paratha":{
+    "paratha":{
         "calories":65,
         "quantity":1
     },
