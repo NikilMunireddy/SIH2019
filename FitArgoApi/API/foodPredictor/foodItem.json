@@ -1,0 +1,78 @@
+{
+    "Egg boiled":{
+        "calories":80,
+        "quantity":1
+    },
+    "Egg fried":{
+        "calories":110,
+        "quantity":1
+    },
+    "Egg omlette":{
+        "calories":120,
+        "quantity":1
+    },
+    "Chapati":{
+        "calories":60,
+        "quantity":1
+    },
+    "Paratha":{
+        "calories":65,
+        "quantity":1
+    },
+    "roti":{
+        "calories":50,
+        "quantity":1
+    },
+    "puri":{
+        "calories":80,
+        "quantity":1
+    },
+    "sabzi":{
+        "calories":150,
+        "quantity":"1 cup"
+    },
+    "nan":{
+        "calories":150,
+        "quantity":1
+    },
+    "dal":{
+        "calories":150,
+        "quantity":"1 cup"
+    },
+    "curd":{
+        "calories":100,
+        "quantity":"1 cup"
+    },
+    "samosa":{
+        "calories":100,
+        "quantity":1
+    },
+    "kabab":{
+        "calories":150,
+        "quantity":"1 plate"
+    },
+    "meat curry":{
+        "calories":150,
+        "quantity":"1 cup"
+    },
+    "veg curry":{
+        "calories":175,
+        "quantity":"1 cup"
+    },
+    "potato chips":{
+        "calories":180,
+        "quantity":"1 plate"
+    },
+    "chicken biryani":{
+        "calories":170,
+        "quantity":"1 plate"
+    },
+    "mutton biryani":{
+        "calories":210,
+        "quantity":"1 plate"
+    },
+    "rice":{
+        "calories":130,
+        "quantity":"1 plate"
+    }
+}

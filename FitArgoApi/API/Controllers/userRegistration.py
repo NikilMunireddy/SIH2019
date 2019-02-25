@@ -31,5 +31,5 @@ def register_user():
 # returns the entire user details tuple
 @user_registration.route('/api/UserRegistration/getRegisterdUser/<user_id>',methods=['GET','POST'])
 def get_registerd_user(user_id):
-    status,result=get_registration_details.get_registration_deatils(user_id)
-    return jsonify({"status":status,'result':result})
+    result=get_registration_details.get_registration_deatils(user_id)
+    return jsonify({'result':result})

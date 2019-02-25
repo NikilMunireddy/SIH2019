@@ -21,8 +21,21 @@ def get_steps_info(user_id,date):
     except(Exception, psycopg2.Error) as error:
         print(error)
         status="Failed"
+    result_dict={}
 
-    return (status,result)
+    try:
+        for row in  result:
+            result_dict={
+                'steps':row[0]
+            }
+    except IndexError as e:
+        result_dict={'error':e}
+    
+    res={
+        "status":status,
+        'data':result_dict
+    }
+    return res
 
 
 if __name__ == "__main__":

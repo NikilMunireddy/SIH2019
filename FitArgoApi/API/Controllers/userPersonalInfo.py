@@ -30,9 +30,6 @@ def add_user_personal_details():
 
 @user_personal_details.route('/api/userPersonalDetails/getUserInfo/<user_id>',methods=['GET','POST'])
 def get_user_info_details(user_id):
-    status,result=get_user_info.get_user_information(user_id)
-    return jsonify({
-            "status":status,
-            'result':result
-            })
+    result=get_user_info.get_user_information(user_id)
+    return jsonify({'result':result})
 

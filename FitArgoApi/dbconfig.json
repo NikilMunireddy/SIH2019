@@ -1,6 +1,7 @@
 {
-    "host":"localhost",
-    "database":"fitargo",
-    "user":"postgres",
-    "password":"password"
+    "host":"ec2-107-21-99-237.compute-1.amazonaws.com",
+    "database":"dbtqkpoav2veui",
+    "user":"aftibkxiqcrytq",
+    "port":"5432",
+    "password":"8c84a234987a6d01290467c1f500caccabdc18c64a432b7b5e993f3354c11690"
 }

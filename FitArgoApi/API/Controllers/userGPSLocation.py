@@ -19,5 +19,5 @@ def add_gps_cords(user_id,long,lat):
 def get_cords(user_id,start_date,end_date):
     start_ts=time.mktime(datetime.datetime.strptime(start_date, "%Y-%m-%d").timetuple())
     end_ts=time.mktime(datetime.datetime.strptime(end_date, "%Y-%m-%d").timetuple())
-    status,res=get_gps_cord.get_gps_points(user_id,start_ts,end_ts)
-    return jsonify({"status":status,"result":res})
+    res=get_gps_cord.get_gps_points(user_id,start_ts,end_ts)
+    return jsonify({"result":res})

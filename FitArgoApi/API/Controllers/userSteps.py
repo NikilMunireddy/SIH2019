@@ -9,6 +9,11 @@ user_steps=Blueprint('user_steps',__name__)
 CORS(user_steps)
 
 
+@user_steps.route('/api/userSteps/testConnection',methods=['GET','POST'])
+def test_conn():
+    return jsonify({'status':'True'})
+    
+
 # Insert steps into database, if entry already existess for the day then the database is updated
 @user_steps.route('/api/userSteps/<user_id>/<steps>/<date>',methods=['GET','POST'])
 def user_step_count(user_id,steps,date):

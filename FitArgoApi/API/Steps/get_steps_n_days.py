@@ -22,14 +22,27 @@ def get_steps_info(user_id,date_start,date_end):
         cursor.execute(SQL_QUERY,value)
         result=cursor.fetchall()
         if cursor.rowcount>0:
-            status="Success"
+            status="success"
         else:
             status="No result"
     except(Exception, psycopg2.Error) as error:
         print(error)
         status="Failed"
+    
+    # convert to python dictonary
+    result_dict={}
+    try:
+        for row in result:
+            for count,day in enumerate(row):
+                result_dict['day'+str(count)] = day
+    except IndexError as e:
+        result_dict={'error':e}
 
-    return (status,result)
+    res={
+        "status":status,
+        'data':result_dict
+    }
+    return res
 
 
 if __name__ == "__main__":

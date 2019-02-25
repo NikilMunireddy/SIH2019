@@ -13,15 +13,32 @@ def get_registration_deatils(user_id):
         SQL_QUERY="SELECT * FROM registration_detail WHERE id=%s"
         cursor.execute(SQL_QUERY,(user_id,))
         result=cursor.fetchall()
-        print(result)
         if cursor.rowcount>0:
-            status="Success"
+            status="success"
         else:
             status="No result"
     except(Exception, psycopg2.Error) as error:
         print(error)
         status="Failed"
-    return (status,result)
+    result_dict={}
+
+    try:
+        for row in result:
+            result_dict={
+                'id':row[0],
+                'name':row[1],
+                'age':row[2],
+                'height':row[3],
+                'weight':row[4],
+                'bmi':row[5]
+            }
+    except Exception as identifier:
+        print(identifier)
+    res={
+        "status":status,
+        'data':result_dict
+    }
+    return res
 
 if __name__ == "__main__":
-    get_registration_deatils('1243')
+    print(json.dumps(get_registration_deatils('1243'),indent=2))

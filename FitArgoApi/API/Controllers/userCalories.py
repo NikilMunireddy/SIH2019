@@ -14,5 +14,5 @@ def add_user_information(user_id,date,burnt,consumed):
 
 @user_calories.route('/api/Calories/getCaloriesInfo/<user_id>/<date>',methods=['GET','POST'])
 def get_calories_information(user_id,date):
-    status,result=get_calories_info.get_calories_info(user_id,date)
-    return jsonify({'status':status,"result":result})
+    result=get_calories_info.get_calories_info(user_id,date)
+    return jsonify({"result":result})

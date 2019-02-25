@@ -28,5 +28,5 @@ if __name__ == "__main__":
     DB_CONFIG_FILE='../../dbconfig.json'
     get_connection()
 else:
-    DB_CONFIG_FILE="./dbconfig.json"
+    DB_CONFIG_FILE='./dbconfig.json'
 

@@ -9,6 +9,7 @@ from API.Controllers.userRegistration import user_registration
 from API.Controllers.userGPSLocation import user_gps_cords
 from API.Controllers.userCalories import user_calories
 from API.Controllers.getFoodName import food_name
+from API.Controllers.userSteps import user_steps
 
 #------------------------------------------------------------------
 
@@ -20,9 +21,9 @@ app.register_blueprint(user_registration)
 app.register_blueprint(user_gps_cords)
 app.register_blueprint(user_calories)
 app.register_blueprint(food_name)
-
+app.register_blueprint(user_steps)
 
 #--------------Run the flask Server ----------
 if __name__ == "__main__":
-    app.run(debug=True, host='localhost', port=5000)
+    app.run()
 
