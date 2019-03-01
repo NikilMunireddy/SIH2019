@@ -26,7 +26,7 @@ def user_step_count(user_id,steps,date):
 @user_steps.route('/api/userSteps/<user_id>/<date>',methods=['GET','POST'])
 def get_user_steps(user_id,date):
     steps=get_step_details.get_steps_info(user_id,date)
-    return jsonify({"steps":steps})
+    return jsonify({"result":steps})
 
 
 # returns step count on 'n' days
@@ -35,4 +35,4 @@ def get_steps_of_n_days(user_id,start,end):
     start_ts=time.mktime(datetime.datetime.strptime(start, "%Y-%m-%d").timetuple())
     end_ts=time.mktime(datetime.datetime.strptime(end, "%Y-%m-%d").timetuple())
     n_days_steps=get_steps_n_days.get_steps_info(user_id,start_ts,end_ts)
-    return jsonify({'steps':n_days_steps})
+    return jsonify({'result':n_days_steps})

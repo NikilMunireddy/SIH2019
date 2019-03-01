@@ -7,11 +7,11 @@ import psycopg2
 import json
 
 def get_steps_info(user_id,date):
+    conn=db_connection.get_connection()
+    cursor=conn.cursor()
     try:
         SQL_QUERY="SELECT steps FROM steps WHERE id=%s AND date=%s"
         value=(user_id,date)
-        conn=db_connection.get_connection()
-        cursor=conn.cursor()
         cursor.execute(SQL_QUERY,value)
         result=cursor.fetchall()
         if cursor.rowcount>0:

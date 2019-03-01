@@ -22,7 +22,7 @@ def add_user_personal_details():
     photo_url=request.args.get('photo_url')
     misc=None   # A Json column
     status=add_user_info.add_to_database(user_id,fullname,first_name,last_name,photo_url,misc)
-    return jsonify({'ret':status})
+    return jsonify({'status':status})
 
 
 #'''-------------GET USER INFO-------------'''

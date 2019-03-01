@@ -3,28 +3,24 @@
         "calories":80,
         "quantity":1
     },
-    "fried egg":{
-        "calories":110,
-        "quantity":1
-    },
-    "omlette egg":{
-        "calories":120,
+    "omlette":{
+        "calories":323,
         "quantity":1
     },
     "chapati":{
-        "calories":60,
+        "calories":120,
         "quantity":1
     },
     "paratha":{
-        "calories":65,
+        "calories":258,
         "quantity":1
     },
     "roti":{
-        "calories":50,
+        "calories":120,
         "quantity":1
     },
     "puri":{
-        "calories":80,
+        "calories":141,
         "quantity":1
     },
     "sabzi":{
@@ -36,43 +32,64 @@
         "quantity":1
     },
     "dal":{
-        "calories":150,
+        "calories":222,
         "quantity":"1 cup"
     },
     "curd":{
-        "calories":100,
+        "calories":138,
         "quantity":"1 cup"
     },
     "samosa":{
-        "calories":100,
+        "calories":295,
         "quantity":1
     },
     "kabab":{
-        "calories":150,
-        "quantity":"1 plate"
+        "calories":226,
+        "quantity":"100 grams"
     },
     "meat curry":{
         "calories":150,
         "quantity":"1 cup"
     },
     "veg curry":{
-        "calories":175,
+        "calories":188,
         "quantity":"1 cup"
     },
     "potato chips":{
-        "calories":180,
-        "quantity":"1 plate"
+        "calories":298,
+        "quantity":"1 pack"
     },
     "chicken biryani":{
-        "calories":170,
-        "quantity":"1 plate"
-    },
-    "mutton biryani":{
-        "calories":210,
-        "quantity":"1 plate"
+        "calories":292,
+        "quantity":"1 cup"
     },
     "rice":{
-        "calories":130,
-        "quantity":"1 plate"
-    }
+        "calories":205,
+        "quantity":"1 cup"
+    },
+   "coca cola":{
+    "calories":140,
+    "quantity":"1 can"
+   },
+   "tea":{
+    "calories":20,
+    "quantity":"1 cup"
+   },
+   "sprite":{
+    "calories":140,
+    "quantity":"1 can"
+   },
+   "idly":{
+    "calories":58,
+    "quantity":1
+   },
+   "dosa":{
+    "calories":74,
+    "quantity":1
+   },
+   "vada":{
+    "calories":135,
+    "quantity":1
+   }
+   
 }

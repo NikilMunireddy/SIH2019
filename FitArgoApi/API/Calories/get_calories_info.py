@@ -8,9 +8,9 @@ import json
 
 
 def get_calories_info(user_id, date):
+    conn = db_connection.get_connection()
+    cursor = conn.cursor()
     try:
-        conn = db_connection.get_connection()
-        cursor = conn.cursor()
         SQL_QUERY = "SELECT * FROM calories WHERE id=%s AND date=%s"
         value = (user_id, date)
         cursor.execute(SQL_QUERY, value)

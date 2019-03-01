@@ -25,5 +25,5 @@ app.register_blueprint(user_steps)
 
 #--------------Run the flask Server ----------
 if __name__ == "__main__":
-    app.run()
+    app.run(host="10.2.72.136",port=5000)
 

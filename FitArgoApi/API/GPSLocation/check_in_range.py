@@ -22,4 +22,4 @@ def check_points_in_range(long1,lat1,long2,lat2,radius):
     
 
 if __name__ == "__main__":
-    print(check_points_in_range(12.122234, 72.44424, 12.122434, 72.4423,500))
+    print(check_points_in_range(12.122234, 72.44424, 12.122434, 72.4423, 500))

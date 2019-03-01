@@ -20,6 +20,7 @@ def register_user():
     height=float(request.args.get('height'))
     weight=float(request.args.get('weight'))
     bmi=float(request.args.get('bmi'))
+    # BMI = weight (kg)/height(m) ^2
     misc=None
 
     status=add_registration_details.register_user_info(user_id,name,age,height,weight,bmi,misc)

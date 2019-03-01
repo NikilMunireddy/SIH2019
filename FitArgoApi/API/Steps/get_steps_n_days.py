@@ -14,11 +14,11 @@ import json
 
 
 def get_steps_info(user_id,date_start,date_end):
+    conn=db_connection.get_connection()
+    cursor=conn.cursor()
     try:
         SQL_QUERY="SELECT steps FROM steps WHERE time BETWEEN %s AND %s AND id=%s"
         value=(date_start,date_end,user_id)
-        conn=db_connection.get_connection()
-        cursor=conn.cursor()
         cursor.execute(SQL_QUERY,value)
         result=cursor.fetchall()
         if cursor.rowcount>0:
