@@ -19,7 +19,8 @@ def get_food_name():
         return jsonify({
             'success' : True,
             'prediction' : result,
-            'calories':calories
+            'calories':calories,
+            "file":"/file/path"
             })
     else:
-        return jsonify({'success':False})
+        return jsonify({'success':os.path.dirname("__name__")})

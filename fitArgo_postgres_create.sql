@@ -90,4 +90,9 @@ ALTER TABLE registration_detail ADD CONSTRAINT "id_unique" UNIQUE(id);
 ALTER TABLE gps_location  ADD COLUMN time float;
 ALTER TABLE steps ADD COLUMN time float;
 
+ALTER TABLE user_personal_info ADD COLUMN email varchar(255);
+
+
+
+
 
