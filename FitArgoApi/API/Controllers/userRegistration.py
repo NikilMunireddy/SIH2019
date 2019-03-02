@@ -42,7 +42,7 @@ def register_user():
     # BMI = weight (kg)/height(m) ^2
     # name,token,
     misc=None
-    status=add_user_info.add_to_database(user_id,email_id,"first_name","last_name","photo_url",None,"email_id")
+    status=add_user_info.add_to_database(user_id,email_id,"first_name","last_name","photo_url",None,email_id)
     status_reg=add_login_details.add_login_details("user_id","access_tkn",email_id,password,misc)
 
     status=add_registration_details.register_user_info(user_id,token,12,height,weight,bmi,misc)

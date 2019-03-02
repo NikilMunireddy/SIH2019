@@ -28,5 +28,5 @@ app.register_blueprint(login_details)
 
 #--------------Run the flask Server ----------
 if __name__ == "__main__":
-    app.run(host="10.1.235.4",port=5000)
+    app.run(host="192.168.43.241",port=5000)
 
