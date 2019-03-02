@@ -8,12 +8,10 @@ login_details=Blueprint("login_details",__name__)
 
 @login_details.route("/api/loginDetails/addCreds/",methods=['GET','POST'])
 def add_login_creds():
-    user_id=request.args.get("id")
-    access_tkn=request.args.get("access_tkn")
     email_id=request.args.get("email_id")
     password=request.args.get("password")
     misc=None
-    status=add_login_details.add_login_details(user_id,access_tkn,email_id,password,misc)
+    status=add_login_details.add_login_details("user_id","access_tkn",email_id,password,misc)
     return jsonify({'status':status})
 
 

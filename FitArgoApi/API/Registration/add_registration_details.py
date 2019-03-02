@@ -18,7 +18,7 @@ def register_user_info(id,name,age,height,weight,bmi,misc):
         cursor.execute(SQL_QUERY,values)
         conn.commit()
         if cursor.rowcount >0:
-            status="Success"
+            status="success"
         else:
             status="Could Not insert"
 
