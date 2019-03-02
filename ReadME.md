@@ -12,7 +12,7 @@ Modify `dbconfig.json` before running `main.py`
 
 run the below command to run the server
 ```
-python main.py
+python app.py
 ``` 
 
 ## database architecture 
