@@ -16,6 +16,7 @@ def add_sport_event(uid,location_lat,location_long,pdate,stime,etime,level,parti
         SQL_QUERY="INSERT INTO games (uid,location_lat,location_long,pdate,stime,etime,level,participants) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)"
         value=(uid,location_lat,location_long,pdate,stime,etime,level,participants)
         cursor.execute(SQL_QUERY,value)
+        conn.commit()
         if cursor.rowcount > 0:
             status="success"
         else:
