@@ -26,13 +26,15 @@ def get_all_games(user_id):
                     "stime":str(row[4]),
                     "etime":str(row[5]),
                     "level":row[6],
-                    "participants":row[7]
+                    "participants":row[7],
+                    "address":row[9],
+                    "gname":row[10]
                 }
             res.append(result_dict)
         except IndexError as e:
             print(e)
 
-
     except (Exception,psycopg2.Error) as error:
         print(error)
+        
     return res

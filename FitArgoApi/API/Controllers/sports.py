@@ -7,22 +7,24 @@ sports=Blueprint('sports',__name__)
 CORS(sports)
 #c_id,user_id,descripition,imageurl,eventname,steps,calories
 # uid,location_lat,location_long,pdate,stime,etime,level,participants
-@sports.route('/api/Sports/addEvent',methods=['GET','POST'])
+@sports.route('/api/Sports/addEvent/',methods=['GET','POST'])
 def sports_method():
     uid=request.args.get('uid')
-    location_lat=request.args.get('location_lat')
-    location_long=request.args.get('location_long')
+    location_lat=None
+    location_long=None
     pdate=request.args.get('pdate')
     stime=request.args.get('stime')
     etime=request.args.get('etime')
     level=request.args.get('level')
     participants=request.args.get('participants')
+    address=request.args.get('address')
+    gname=request.args.get('gname')
 
-    status=addSportEvent.add_sport_event(uid,location_lat,location_long,pdate,stime,etime,level,participants)
+    status=addSportEvent.add_sport_event(uid,location_lat,location_long,pdate,stime,etime,level,participants,address,gname)
     return jsonify({'status':status})
 
 
-@sports.route('/api/Sports/getAllGames',methods=['GET','POST'])
+@sports.route('/api/sports/getAllGames/',methods=['GET','POST'])
 def get_all_game_events():
     result=get_all_games.get_all_games()
     return jsonify({"result":result})

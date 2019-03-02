@@ -26,9 +26,11 @@ def get_all_games():
                     "stime":str(row[4]),
                     "etime":str(row[5]),
                     "level":row[6],
-                    "participants":row[7]
+                    "participants":row[7],
+                    "address":row[9],
+                    "gname":row[10]
                 }
-            res.append(result_dict)
+                res.append(result_dict)
         except IndexError as e:
             print(e)
 

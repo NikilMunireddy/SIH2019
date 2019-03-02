@@ -22,7 +22,7 @@ def register_user():
 
     email_id=request.args.get("email")
     ## FB ID HERE
-    user_id=email_id
+    user_id=request.args.get('fbid')
     print("EMAIL",email_id)
     password=request.args.get('password')
     token=request.args.get("token")
@@ -37,7 +37,7 @@ def register_user():
         weight=60
     else:
         weight=float(weight)
-
+    fb_id=request.args.get('fb_id')
     bmi=float(weight/(height/100)**2)
     # BMI = weight (kg)/height(m) ^2
     # name,token,
@@ -47,7 +47,7 @@ def register_user():
 
     status=add_registration_details.register_user_info(user_id,token,12,height,weight,bmi,misc)
     print(('status',status,'registration_status',status_reg))
-    return jsonify({'status':status,'registration_status':status_reg})
+    return jsonify({'user_id':status,'registration_status':status_reg})
 
 
 # HTTP GET:
