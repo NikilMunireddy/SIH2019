@@ -14,7 +14,7 @@ CORS(user_registration)
 
 @user_registration.route('/api/UserRegistration/registerUser/',methods=['GET','POST'])
 def register_user():
-    user_id=request.args.get('id')
+    user_id=request.POST.get('id')
     name=request.args.get('name')
     age=int(request.args.get('age'))
     height=float(request.args.get('height'))
@@ -22,6 +22,7 @@ def register_user():
     
     bmi=float(weight/(height/100)**2)
     # BMI = weight (kg)/height(m) ^2
+    # name,token,
     misc=None
 
     status=add_registration_details.register_user_info(user_id,name,age,height,weight,bmi,misc)

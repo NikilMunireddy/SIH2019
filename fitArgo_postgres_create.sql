@@ -91,7 +91,13 @@ ALTER TABLE gps_location  ADD COLUMN time float;
 ALTER TABLE steps ADD COLUMN time float;
 
 ALTER TABLE user_personal_info ADD COLUMN email varchar(255);
+//------------------------------------------------------------------------------------------------
 
+
+CREATE TABLE login (id varchar(255), access_tkn varchar(255) NOT NULL,email_id varchar(255) PRIMARY KEY,password varchar(255));
+ ALTER TABLE login ADD COLUMN misc json;
+
+CREATE TABLE self_challenge(c_id varchar(255) PRIMARY KEY , id varchar(255) , descripition varchar(1200), imageurl varchar(500),eventname varchar(255),steps integer,calories float);
 
 
 
