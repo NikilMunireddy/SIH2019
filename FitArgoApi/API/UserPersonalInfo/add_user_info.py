@@ -12,10 +12,10 @@ def add_to_database(user_id,username,first_name,last_name,photo_url,misc,email):
     status=""
     try:
         SQL_QUERY="INSERT INTO user_personal_info(id,username,first_name,last_name,photo_url,misc,email) VALUES(%s,%s,%s,%s,%s,%s,%s)"
-        values=(user_id,username,first_name,last_name,photo_url,misc,email)
+        values=(user_id.strip(),username.strip(),first_name.strip(),last_name,photo_url,misc,email)
         cursor.execute(SQL_QUERY,values)
         conn.commit()
-        status="Success"
+        status="success"
     except(Exception,psycopg2.Error) as error:
         print(error)
         status="failed"

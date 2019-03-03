@@ -1,0 +1,2 @@
+challenge_running=False
+users=None

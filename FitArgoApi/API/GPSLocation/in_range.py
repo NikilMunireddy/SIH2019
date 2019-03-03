@@ -15,9 +15,9 @@ def check_points_in_range(long1,lat1,long2,lat2,radius):
     print('Distance (meters) : '+ str(res)+" meters")
     inout=""
     if res <= radius:
-        inout="inside"
+        inout=True
     else:
-        inout="outside"
+        inout=False
     return inout
     
 

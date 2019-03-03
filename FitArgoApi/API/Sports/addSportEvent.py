@@ -20,9 +20,9 @@ def add_sport_event(uid,location_lat,location_long,pdate,stime,etime,level,parti
         if cursor.rowcount > 0:
             status="success"
         else:
-            status="could not insert"
+            raise Exception
         conn.close()
     except (Exception,psycopg2.Error) as error:
         print(error)
-        status='failed'
+        raise Exception
     return status
